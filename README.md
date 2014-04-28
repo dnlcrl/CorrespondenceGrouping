@@ -58,6 +58,34 @@ The output window should look like this (depending on the command line options u
 
 ![alt tag](http://s28.postimg.org/c4nt9cjfh/Schermata_2014_04_17_alle_14_43_32.png)
 
+## Walkthrough
+
+It’s important to say that the only command line parameters required when executing this tutorial are the filenames of the model and the scene, in this exact order. All other parameters are set to a default value that will make the tutorial work correctly with the supplied dataset, although with different models and scene some parameter values might need to be adjusted. You can play around with them to see how they influence the final result.
+
+You can choose between two correspondence clustering algorithms with the command line switch --algorithm (Hough|GC)
+
+ - Hough (default)
+
+    This is a clustering algorithm based on a 3D Hough voting scheme described in:
+
+    [F. Tombari and L. Di Stefano: “Object recognition in 3D scenes with occlusions and clutter by Hough voting”, 4th Pacific-Rim Symposium on Image and Video Technology, 2010.](http://vision.deis.unibo.it/fede/papers/psivt10.pdf)
+
+ - GC
+
+    This is a geometric consistency clustering algorithm enforcing simple geometric constraints between pairs of correspondences. It builds on the proposal presented in:
+
+    [H. Chen and B. Bhanu: “3D free-form object recognition in range images using local surface patches”, Pattern Recognition Letters, vol. 28, no. 10, pp. 1252-1262, 2007.](http://webdocs.cs.ualberta.ca/~lihang/Campus/c414/presentation/added/3D%20Free-Form%20Object%20Recognition%20in%20Range%20Images%20Using%20Local%20Surface%20Patches.pdf)
+
+
+Some other interesting switches are *-k*, *-c* and *-r*:
+
+- *-k* shows the keypoints used to compute the correspondences as a blue overlay into the PCL visualizer.
+- *-c* draws a line connecting each pair of model-scene correspondences that survived the clustering process.
+- *-r* estimates the spatial resolution for the model point cloud and afterwards considers the radii used as parameters as if they were given in units of cloud resolution; thus achieving some sort of resolution invariance that might be useful when using this tutorial with the same command line and different point clouds.
+
+
+
+
 ## Notes
 
  - The CMakeLists.txt has been edited in order to let make correctly link and build on Mac OS X 10.9

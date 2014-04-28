@@ -13,9 +13,10 @@
 # Autoasve files
 *.autosave
 
-# pcd and onis
+# pcd, onis and images
 *.pcd
 *.oni
+
 
 # doc
 *.doc/
