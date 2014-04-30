@@ -83,9 +83,6 @@ Some other interesting switches are *-k*, *-c* and *-r*:
 - *-c* draws a line connecting each pair of model-scene correspondences that survived the clustering process.
 - *-r* estimates the spatial resolution for the model point cloud and afterwards considers the radii used as parameters as if they were given in units of cloud resolution; thus achieving some sort of resolution invariance that might be useful when using this tutorial with the same command line and different point clouds.
 
-
-
-
 ## Notes
 
  - The CMakeLists.txt has been edited in order to let make correctly link and build on Mac OS X 10.9
