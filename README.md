@@ -7,7 +7,7 @@ Project based on the tutorial found at [PointClouds.org](http://pointclouds.org/
 
  1. Download the pcd data from [Github](https://raw.github.com/PointCloudLibrary/data/master/tutorials/correspondence_grouping) and extract files in a folder of your convenience.
 
- 2. Download the CorrespondenceGrouping repository from [Github](https://github.com/danieleciriello/CorrespondenceGrouping)
+ 2. Download the repository by clicking [here](https://github.com/danieleciriello/CorrespondenceGrouping/archive/master.zip)
  
  3. Uncompress the archive
  
